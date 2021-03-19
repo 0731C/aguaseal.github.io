@@ -1,0 +1,17 @@
+//中间小导航
+@include mq($max-width:768px){
+  .content-nav {
+
+    .container {
+      @include equal-flex('.item');
+      padding: 0;
+    }
+
+    .item {
+      text-align: center;
+      font-size: $fontSize - 2;
+      line-height: $gap * 2.5;
+      margin-right: 0;
+    }
+  }
+}

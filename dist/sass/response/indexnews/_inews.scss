@@ -1,0 +1,29 @@
+@include mq($max-width:768px){
+  .i-news {
+    margin-bottom: $gap;
+
+    .i-news-box {
+      margin: 0;
+
+      .item-con {
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+
+    .next,.prev {
+      width: 30px;
+      height: 30px;
+      opacity: .6;
+    }
+    .prev {
+      left: 0;
+      background: url("/images/i-news-prev2.png") no-repeat center center;
+    }
+    .next {
+      right: 0;
+      background: url("/images/i-news-next2.png") no-repeat center center;
+    }
+  }
+}

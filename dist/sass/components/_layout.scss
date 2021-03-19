@@ -1,0 +1,275 @@
+.module-page {
+  position: relative;
+  padding: $gap * 2 0;
+  overflow: hidden;
+  background: $colorBg;
+
+  @include mq($max-width:768px){
+  }
+}
+
+
+.container {
+  max-width: 1440px;
+  margin: auto;
+  position: relative;
+
+  @include mq($max-width:768px){
+    width: 100%;
+    padding: 0 $gap;
+  }
+  @include mq($max-width:1280px){
+    width: 1000px;
+    padding: 0 $gap;
+  }
+  @include mq($max-width:1366px){
+    width: 1100px;
+    padding: 0 $gap;
+  }
+}
+
+
+.container-view {
+  width: 1200px;
+  margin: 0 auto;
+
+  @include mq($max-width:768px){
+    width: 100%;
+    padding: 0 $gap;
+  }
+  @include mq($max-width:1280px){
+    width: 1000px;
+    padding: 0 $gap;
+  }
+  @include mq($max-width:1366px){
+    width: 1100px;
+    padding: 0 $gap;
+  }
+}
+
+.index-page {
+  position: relative;
+  height: 100%;
+}
+
+.grid-container {
+  max-width: 1440px;
+  padding: ($gap + 20) 0;
+}
+
+.grid-content {
+  float: left;
+  width: 100%;
+  zoom: 1;
+}
+
+.grid-body {
+  margin-right: 500px;
+
+  p {
+    color: $color6;
+    margin-bottom: $gap;
+  }
+}
+
+.grid-detailed {
+  line-height: $gap * 2;
+  text-align: justify;
+  word-break: break-all;
+}
+.grid-sidebar {
+  float: right;
+  margin-left: -100%;
+  width: 350px;
+}
+
+.index-page.page-lxwm {
+  background: #f2f2f2f3;
+  .module-page {
+    background: #f3f3f3;
+  }
+}
+
+//首页大屏
+.index-home {
+  position:relative;
+  height: 100%;
+  width: 100%;
+  line-height: 100%;
+  background: url(/images/duck2-fade.jpg) no-repeat center center;
+  background-size: cover;
+
+  &::before {
+    content: "";
+    position:absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+  }
+
+  .index-home-text {
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    bottom: 0;
+    text-align: center;
+    display: inline-block;
+    line-height: 1;
+    vertical-align: middle;
+    @include mq($max-width:768px){
+      padding-top:$gap + 10;
+      opacity: .5;
+    }
+    
+    p {
+      color: $colorBg;
+      margin-bottom: $gap;
+      font-size: $fontSize + 50;
+      letter-spacing: 5px;
+      margin-top: $gap + 50;
+      line-height: $gap;
+      font-weight: normal;
+      font-family: "Montserrat";
+
+      @include mq($max-width:768px){
+      font-size:$fontSize + 4;
+      margin-top: 0;
+      }
+
+      &:first-child {
+        font-size:$fontSize * 4;
+        font-family: "Mr Dafoe";
+        margin-top: $gap + 20;
+        letter-spacing: 0px;
+        color: rgb(255, 204, 0);
+        @include mq($max-width:768px){
+          font-size:$fontSize + 10;
+        }
+      }
+    }
+  }
+}
+
+
+.app-row {
+  margin-left: -$gap;
+  margin-right: -$gap;
+
+  &::after,&::before {
+      content: "";
+      display: table;
+  }
+
+  &::after {
+      clear: both;
+  }
+
+  .app-column {
+      position: relative;
+  }
+
+  .app-column-containter {
+      padding-left: 0;
+      padding-right: 0;
+  }
+
+  .app-col-6 {
+      @include mq($min-width:768px){
+          @include col(2);
+      }
+  }
+
+  .app-col-8 {
+      @include mq($min-width:768px){
+          @include col(2,3);
+      }
+  }
+
+  .app-col-4 {
+    @include mq($min-width:768px){
+        @include col(3);
+    }
+  }
+  
+  .sc-column-inner {
+      width: 100%;
+      padding-left: $gap;
+      padding-right: $gap - 10;
+      box-sizing: border-box;
+  }
+
+}
+
+
+
+.sc-row {
+  position: relative;
+}
+
+
+
+//首页标题
+.set-title {
+  font-size: $fontSize * 2;
+  color: $color3;
+  line-height: $gap * 6;
+  text-align: center;
+  color: $color-text;
+  font-weight: bold;
+
+  .item-sub {
+    margin-top: 5px;
+    display: block;
+    font-size: $fontSize;
+    color: $color9;
+  }
+}
+
+.sc-title {
+  display: inline-block;
+  position: relative;
+  margin-bottom: $gap;
+  text-align: center;
+  font-size: $fontSize * 1.5;
+  color: $color-text;
+  font-weight: bold;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: -120px;
+    top: 50%;
+    width: 90px;
+    height: 2px;
+    background: rgb(255, 204, 0);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: -120px;
+    top: 50%;
+    width: 80px;
+    height: 2px;
+    background: rgb(255, 204, 0);
+  }
+}
+
+.swiper-banner {
+  line-height: 1;
+}
+
+.sec-photo {
+  height: auto;
+}
+
+
+//图片居左
+.alignleft {
+  display: inherit;
+  float: left;
+  margin-right: $gap;
+}

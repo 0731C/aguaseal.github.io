@@ -1,0 +1,21 @@
+//新闻内容
+@include mq($max-width:768px) {
+
+  .grid-content {
+    float: none;
+    padding: $gap;
+    @include col(1);
+
+    .grid-body {
+      margin: 0;
+      padding: $gap - 10;
+
+      p {
+        text-align: justify;
+        word-break: break-all;
+        font-size: $fontSize + 2;
+        line-height: $gap + 6;
+      }
+    }
+  }
+}

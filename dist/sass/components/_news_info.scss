@@ -1,0 +1,78 @@
+//新闻内容侧边栏
+.sidebar-news-list {
+	
+	h3 {
+		margin-bottom: $gap;
+		padding-left: $gap;
+		font-size: $fontSize + 4;
+		border-left: 3px $orange solid;
+	}
+	
+	ul {
+		margin: auto;
+	}
+  .item-list {
+    @include col(1);
+
+    .item-title {
+      font-size: $fontSize - 2;
+      line-height: $gap + 20;
+    }
+
+    .item-info,.item-btn {
+      font-size: $fontSize - 4;
+    }
+  }
+}
+
+//面包宵导航
+.grid-info-news {
+  padding: 0 0 40px;
+  margin-top: $gap * 4.5;
+  background: #f4f4f4;
+
+  .bread {
+    background: url("/images/home.png") no-repeat left center;
+    line-height: $gap * 4;
+    border-bottom: 1px $colorC solid;
+
+    a,span {
+      vertical-align: middle;
+      display: inline-block;
+      text-align: center;
+    }
+
+    span {
+      width: 40px;
+      height: 5px;
+      background: url("/images/bread-arrow.png") no-repeat center center;
+    }
+
+    .home {
+      margin-left: 40px;
+    }
+  }
+
+  .back {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    padding-left: 20px;
+    background: url("/images/bread-arrow.png") no-repeat center center;
+  }
+}
+
+.header-tit {
+  width: 800px;
+  margin-top: ($gap * 2);
+
+  .tit {
+    font-size: $fontSize * 3;
+    line-height: $gap * 3;
+	font-weight:bold;
+  }
+
+  .user {
+    margin-top: $gap * 2;
+  }
+}

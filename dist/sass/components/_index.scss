@@ -1,0 +1,53 @@
+//首页内容
+.sc-index {
+  background: url(/images/white_bgr.jpg) no-repeat top center;
+}
+
+.sc-product {
+  text-align: center;
+}
+
+
+.sc-index-info {
+  text-align: center;
+  background-size: cover;
+
+  h3 {
+    display: inline-block;
+    
+    strong {
+      position: relative;
+      color: #253b82;
+    }
+  }
+
+  p {
+    font-size: $fontSize + 2;
+  }
+}
+
+.sc-index-item {
+  margin-top: $gap * 3;
+  font-size: 0;
+  padding: 0 120px;
+
+  ul {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+
+    li {
+      text-align: left;
+      padding-bottom: $gap - 10;
+      padding-left: $gap * 2;
+      line-height: $gap * 1.6;
+      font-size: $fontSize + 2;
+
+      .fa {
+        margin-right: $gap - 10;
+        margin-left: -$gap * 1.3;
+        color: $color-text;
+      }
+    }
+  }
+}

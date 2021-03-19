@@ -1,0 +1,81 @@
+//联系我们
+.content-us {
+	padding: $gap * 3;
+	background: $colorBg;
+	
+	.text {
+		line-height: $gap + 10;
+		text-indent: $gap + 4;
+	}
+
+	.sc-seal-item {
+		margin-top: $gap + 20;
+		padding: $gap 0;
+
+		li {
+			text-align: center;
+		}
+	}
+}
+
+.sec-lxwm-li {
+	margin-left: $gap + 10;
+
+	li {
+		font-size:$fontSize;
+		padding-left: $gap;
+		line-height: $gap + 10;
+
+		&:first-child {
+			margin-bottom: $gap - 10;
+			color: $color-text;
+		}
+	}
+
+	.fa {
+		margin-right: $gap - 10;
+	}
+}
+
+
+
+
+@include mq($max-width:768px){ 
+
+	.content-us {
+		padding: $gap * 2;
+
+		.item-list {
+			@include col(1);
+
+			&:last-child {
+				margin-top: $gap;
+
+				li {
+					line-height: $gap + 10;
+					
+				}
+			}
+		}		
+
+		.sc-seal-item {
+			margin-top: $gap;
+
+			li {
+				margin-bottom: $gap * 3;
+				@include col(1);
+			}
+		}
+		
+		.item-cat {
+			padding: $gap;
+		}
+	}
+
+	.sec-lxwm-li {
+		clear: both;
+		padding: $gap;
+		margin-left: 0;
+		padding-top: $gap;
+	}
+}

@@ -1,0 +1,95 @@
+//底部
+.footer {
+  padding: $gap * 2 0  60px;
+  background: $color-text;
+  text-align: center;
+  color: $colorBg;
+
+  ul {
+    margin-bottom: $gap;
+  }
+
+  li {
+    display: inline-block;
+
+    a {
+      display: block;
+      padding: 0 $gap;
+      color: $colorBg;
+      line-height: $gap + 10;
+
+      &.icp {
+        color: #fff;
+      }
+    }
+  }
+}
+
+
+.footer-fix {
+  position:fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-top: $gap - 10;
+  background: $colorBg;
+  border-top: 1px #ddd solid;
+
+  li {
+    display: inline-block;
+    @include col(4);
+    text-align: center;
+    
+    a {
+      color: $color3;
+      font-size: $fontSize;
+    }
+
+    .fa {
+      color: $color-text;
+      font-size: $fontSize + 4;
+    }
+  }
+}
+
+@include mq($max-width:768px){
+  .footer {
+
+    ul {
+      overflow: hidden;
+      margin-bottom: $gap;
+    }
+
+    li {
+      @include col(1);
+      line-height: $gap + 20;
+
+      a {
+        padding: 0
+      }
+    }
+  }
+}
+
+@include mq($min-width:768px){
+  .footer-fix {
+    display: none;
+  }
+}
+
+
+
+
+//网站各类图标文件
+@font-face {
+  font-family: 'Mr Dafoe';
+  src: url('/static/font/Mr Dafoe.eot');
+  /* IE9*/
+  src: url('/static/font/Mr Dafoe.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('/static/font/Mr Dafoe.woff') format('woff'), /* chrome、firefox */
+  url('/static/font/Mr Dafoe.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('/static/font/Mr Dafoe.svg#svgFontName') format('svg');
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* iOS 4.1- */
+}

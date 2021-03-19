@@ -1,0 +1,32 @@
+@include mq($max-width:768px){
+
+	.footer-nav {
+		margin: $gap 5px;
+		padding: 0;
+		border: none;
+		li {
+			@include col(1);
+			padding: 10px 0;
+			border-top: 1px #e5e5e5 solid;
+
+			.tit {
+			display: block;
+			font-weight: normal;
+			}
+
+			&:nth-child(2),&:nth-child(3),&:nth-child(5) {
+				width: 100%;
+			}
+
+			&:last-child {
+				padding: $gap 0;
+				width: 100%;
+				text-align: center;
+			}
+
+			.navson {
+				display: none;
+			}
+		}
+	}
+}

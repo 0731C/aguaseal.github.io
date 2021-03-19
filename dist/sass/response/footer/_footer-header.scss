@@ -1,0 +1,16 @@
+//footer
+@include mq($max-width:768px){
+	.footer-logo {
+		img {
+			width: 120px;
+			height: 100%;
+		}
+	}
+	.footer-user {
+		font-size: $fontSize - 3;
+
+		img {
+			height: 60px;
+		}
+	}
+}

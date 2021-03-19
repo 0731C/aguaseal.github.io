@@ -1,0 +1,171 @@
+//手机屏
+@include mq($max-width:768px){
+
+  .grid-info-news {
+    padding: 0;
+    margin-top: 45px;
+  }
+}
+
+
+
+//平板
+@include screen(768px,1024px){
+  //关于我们按扭
+  .about-tab-btn {
+    width: 100%;
+  }
+
+  .about-tab-con {
+    margin-top: $gap + 20px;
+    //关于我们证书
+    .honor {
+      width: 85%;
+      margin: 0 auto;
+
+      .swiper-slide {
+        padding: $gap;
+      }
+    }
+
+    //关于我们案例
+    .case-tab-box {
+      width: 85%;
+      margin: 0 auto;
+    }
+  }
+
+  //关于我们介绍
+  .sec-about-item {
+
+    .txt {
+      font-size: $fontSize;
+    }
+
+  }
+
+
+
+  .column-bd {
+    padding: 40px;
+    margin-right: 0;
+
+    li:nth-of-type(2n) {
+      margin-right: 0;
+    }
+    .item-list {
+      @include col(2);
+      width: calc(100% / 2 - 20px);
+      margin-right: 40px;
+    }
+
+    .item-title {
+      font-weight: normal;
+      line-height: $gap * 2;
+    }
+
+    .item-time {
+      span {
+        font-size: 28px;
+      }
+    }
+  }
+
+  .sub-banner {
+	  height: 350px;
+	  line-height:350px;
+  }
+  .banner-view {
+	  padding: 0 ($gap * 2)
+  }
+  .txt {
+	  font-size:$fontSize * 4;
+  }
+  .scroll-btn {
+	  width: 60px;
+	  height:60px;
+	  line-height: 60px;
+  }
+}
+
+
+@include max-screen(1600px){
+  .container,.container-view {
+    width: 1200px;
+  }
+}
+
+@include max-screen(1440px){
+  .container {
+    width: 1100px;
+  }
+  .container-view {
+    width: 88%;
+  }
+
+  .header-nav {
+    margin-right: 220px;
+  }
+
+  .header-user {
+    width: 250px;
+  }
+}
+
+@include max-screen(1280px){
+  .container {
+    width: 1000px;
+  }
+
+  .header-nav {
+    margin-right: 200px;
+
+    li {
+      a {
+        padding: 0 10px;
+      }
+    }
+  }
+
+  .header-user {
+    width: 250px;
+  }
+}
+
+@include max-screen(1024px){
+  .container {
+    width: 100%;
+  }
+  .container-view {
+    width: auto;
+    padding: 0 5%;
+  }
+  //头部手机导航
+  .header-icon {
+	  position:static;
+  }
+}
+
+@include max-screen(1024px) {
+  .aside-content {
+    display: none;
+  }
+}
+
+@include iphone6() {
+  //新闻内容　
+  .grid-container, .grid-content {
+    width: 100%;
+    margin: 0;
+    padding: $gap / 3;
+  }
+  .grid-body {
+    margin: 0 auto;
+  }
+  .grid-sidebar {
+    float: none;
+    margin: 0;
+    width: auto;
+    clear: both;
+  }
+}

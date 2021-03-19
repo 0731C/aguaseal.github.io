@@ -1,0 +1,31 @@
+//产品列表页一行二个
+@include mq($max-width:768px) {
+
+	.column-figure-pro {
+
+		.item-list {
+			@include col(1);
+			margin-bottom: 0;
+		}
+
+		.item-pic {
+			height: auto;
+		}
+
+		.item-title {
+			font-size: $fontSize + 4;
+		}
+
+		.item-btn {
+			margin: ($gap - 10) 0 $gap;
+			padding: 5px 20px;
+			font-size: $fontSize - 4;
+			background-position: 85% center;
+		}
+
+		.item-num {
+			font-size: $fontSize - 4;
+			color: $color9;
+		}
+	}
+}

@@ -1,0 +1,23 @@
+//联第我们
+@include mq($max-width:768px){
+  .sec-contact {
+    top: 100px;
+    padding: $gap 30px;
+    font-size: $fontSize;
+  }
+
+  .sec-contact-server {
+
+    .sec-title {
+      margin: 0 auto $gap;
+      font-size: $fontSize * 2;
+    }
+  }
+  .sec-contact-page1 {
+
+    .info {
+      font-size: $fontSize - 2;
+      width: 100%;
+    }
+  }
+}

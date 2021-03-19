@@ -1,0 +1,257 @@
+header {
+	position:fixed;
+	top: 0;
+	left: 50%;
+	width: 100%;
+  transform:translateX(-50%);
+	z-index: 50;
+  max-width: 100%;
+	color: $colorBg;
+	background: rgba($color: #fff, $alpha: 1);
+}
+
+.index-page {
+  header {
+    transition: all .6s;
+  }
+}
+
+
+
+.header {
+  position: relative;
+  font-size: 0;
+  max-width: 1440px;
+  margin: auto;
+  transition: all .6s;
+  background: rgba($color: #fff, $alpha: 0.2);
+  text-align: right;
+}
+
+//logo部份
+.logo {
+  position: relative;
+  top: 10px;;
+  float: left;
+}
+
+.mini {
+  border-bottom: 1px #ddd solid;
+
+  .header {
+
+    a {
+      color: $color6;
+    }
+  }
+}
+
+
+
+//header头部菜单
+.header-nav {
+  display: inline-block;
+  
+  & li {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    padding: 0 $gap * 2;
+
+    .fa {
+      margin-left: $gap - 10;
+    }
+    
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 0;
+      height: 2px;;
+      opacity: 0;
+      background: salmon;
+      transition: all .6s;
+    }
+
+    &:hover {
+      
+      > a {
+        color: $orange;
+      }
+
+      &::before {
+        width: 100%;
+        left: 0;
+        opacity: 1;
+        transition: all .6s;
+      }
+    }
+
+   > a {
+      display: inline-block;
+      position: relative;
+	    line-height: $gap * 4.5;
+      font-size: $fontSize;
+      color: $color3;
+    }
+  }
+}
+
+.subnav {
+  display: none;
+  position: absolute;
+  top: 91px;
+  left: 0;
+  min-width: 250px;
+  background: #000;
+  text-align: center;
+  box-shadow: 0 3px 3px rgba(0,0,0,.05);
+
+  li {
+    width: 100%;
+    padding: 0;
+
+    &:hover {
+      
+      &::before {
+        display: none;
+      }
+    }
+
+    & > a {
+      display: block;
+      color: $color6;
+      line-height: $gap + 20;
+      transition: color .2s;
+      font-size: $fontSize - 2;
+      color: #fff;
+      text-align: left;
+      padding-left: $gap;
+
+      .fa {
+        opacity: 0;
+        transition: all .4s;
+      }
+
+      &:hover {
+        background: $color-text;
+        color: $colorF;
+        transition: all .4s;
+        .fa {
+          opacity: 1;
+          margin-right: $gap;
+          transition: all .4s;
+        }
+      }
+    }
+  }
+}
+
+
+//user
+.header-user {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: ($gap * 20);
+  background: $orange;
+  line-height: 90px;
+  text-align: center;
+
+  .icon {
+    display: inline-block;
+    margin: 0 $gap;
+    color: $colorF;
+    font-size: $fontSize;
+  }
+  .icon-list {
+	  display: none
+  }
+  .icon-svg {
+	  margin:0 25px;
+	  vertical-align:middle;
+	  width: 20px;
+	  height: 20px;
+	  color:$colorBg;
+  }
+}
+
+.header-search-box {
+	position: fixed;
+    top: 0;
+    height: 100%;
+	width:100%;
+	background:#fff;
+	display:none;
+	z-index:100;
+	
+	.search-top {
+		border-bottom: 1px #ccc solid;
+		padding-bottom: $gap;
+	}
+	.search-top {
+		padding: ($gap * 4) 0;
+	}
+	.search {
+		position:relative;
+		float:left;
+		width:94%;
+		font-size:14px;
+		
+		input[type=text] {
+			width: 85%;
+			height:60px;
+			line-height:60px;
+			float:left;
+			font-size:20px;
+			color:$color6;
+			text-indent:10px;
+			border:none;
+			padding-left:40px;
+			background:url('/images/search-btn.png') no-repeat left center;
+		}
+		input[type=submit] {
+			border:none;
+			width: 150px;
+			height:60px;
+			float:right;
+			line-height:40px;
+			border-radius: 5px;
+			background:#a08448;
+			font-size:18px;
+          color: $colorBg;
+		}
+	}
+	.search-close {
+		float:right;
+		width: 60px;
+		height: 60px;
+		line-height:60px;
+		border-radius: 50%;
+		text-align:center;
+		background: url('/images/search-close.png') no-repeat center center;
+		color:#fff;
+		font-size:20px;
+	}
+	
+	.search-txt {
+		color:#000;
+		padding: $gap;
+		h3 {
+			margin-bottom: $gap;
+			font-size:$fontSize * 2;
+		}
+
+        li:nth-child(2n+1) {
+          background: #f1f1f1;
+          color: $colorBg;
+        }
+
+		a {
+			line-height: $gap * 4;
+			font-size:$fontSize + 6;
+			color:#000;
+		}
+	}
+}

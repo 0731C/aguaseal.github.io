@@ -1,0 +1,51 @@
+@include mq($max-width:768px){
+
+  .sec-server-list {
+    position: static;
+    padding: 0;
+
+    ul {
+      margin: 0 -10px;
+    }
+
+    li {
+      @include col(2);
+      padding: 10px;
+    }
+
+    .item-box {
+      margin-bottom: $gap;
+    }
+
+    .item-con {
+      padding: 10px;
+      background: #f6f6f6;
+    }
+
+    .item-line {
+      width: 20px;
+      height: 2px;
+      background: $color9;
+    }
+
+    .item-desc {
+      font-size: $fontSize - 2;
+    }
+
+    .item-title {
+      color: #1e1e1e;
+    }
+
+    .imt {
+      width: 30px;
+    }
+  }
+
+  .item-btn {
+    display: none;
+  }
+
+  .sec-server-box {
+    display: none;
+  }
+}

@@ -1,0 +1,28 @@
+@include mq($max-width:768px){ 
+
+    .sc-index-info {
+        
+        h3 {
+            font-size: $fontSize + 2;
+        }
+        p {
+            font-size: $fontSize;
+        }
+    }
+
+    .sc-index-item {
+        padding: $gap 0 0 $gap;
+        margin-top: 20px;
+
+        ul {
+            width: 100%;
+
+            li {
+                padding: 0;
+                margin-bottom: $gap - 10;
+                line-height: $gap + 4;
+                font-size: $fontSize;
+            }
+        }
+    }
+}

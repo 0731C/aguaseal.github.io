@@ -1,0 +1,20 @@
+@include mq($max-width:768px){
+	.copy {
+		padding: $gap 0 0;
+		border-top: 1px #e5e5e5 solid;
+		text-align: center;
+
+		.link {
+			float: none;
+
+			a {
+				font-size: $fontSize - 2;
+			}
+		}
+
+		.add {
+			font-size: $fontSize - 2;
+			margin-top: $gap;
+		}
+	}
+}

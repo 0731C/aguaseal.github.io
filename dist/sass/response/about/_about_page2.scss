@@ -1,0 +1,25 @@
+@include mq($max-width:768px){
+  .sec-about-info {
+
+    .item-list {
+      margin-bottom: $gap * 3;
+
+      p {
+        line-height: $gap + 4px;
+      }
+
+      & > div {
+        width: 100%;
+        float: none;
+
+        &:nth-child(2n) {
+          width: 100%;
+        }
+      }
+
+      .sec-title {
+        margin-bottom: $gap;
+      }
+    }
+  }
+}

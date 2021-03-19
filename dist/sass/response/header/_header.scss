@@ -1,0 +1,93 @@
+//头部菜单
+@include mq($max-width:768px){
+
+  .logo{
+    top: 0;
+  }
+
+  .module-banner {
+    margin-top: 50px;
+  }
+  .index-page {
+    header {
+      background: $colorBg;
+      border-bottom: 1px #ddd solid;
+    }
+
+    .mini {
+      border-bottom: 1px #ccc solid;;
+      .header-user {
+        background: $colorBg;
+      }
+    }
+  }
+
+
+
+  .header {
+    padding: 0 ($gap - 10px);
+
+    .logo {
+      padding-top: 5px;
+
+      img {
+        width: auto;
+        height: 50px;
+      }
+    }
+    &:hover {
+      border-bottom: none;
+
+      .header-user {
+        background:none;
+      }
+    }
+
+    .header-user {
+      position: static;
+      float: right;
+      background: $colorBg;
+    }
+  }
+
+  .mini {
+  }
+
+  .header-m-nav {
+    display: none;
+    position:absolute;
+    top:51px;
+    left:0;
+    padding:$gap;
+    width: 100%;
+    font-size:$fontSize;
+    background:#fff;
+
+    .navson {
+      display:none;
+      padding: 10px $gap;
+    }
+
+    li {
+      padding: ($gap - 10px) 0;
+      border-bottom:1px #ddd solid;
+
+      a {
+        display:block;
+      }
+    }
+
+    .header-m-close {
+      display: block;
+      bottom: 10px;
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+      margin-top: $gap;
+      margin-left: 45%;
+      background: #000 url("/images/search-close.png") no-repeat center center;
+      color: $colorBg;
+      border-radius: 50%;
+    }
+  }
+}

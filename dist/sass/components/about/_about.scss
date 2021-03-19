@@ -1,0 +1,81 @@
+.sc-about-header {
+
+    .item-list {
+        @include col(2);
+
+        &:first-child {
+            width: 70%;
+            
+            p {
+                margin-bottom: $gap - 10;
+                line-height: $gap + 4;
+            }
+        }
+
+        &:last-child {
+            padding-left: $gap + 20;
+            width: 25%;
+        }
+    }
+}
+
+
+
+.sc-line {
+    margin-top: $gap * 4;
+    padding-top: $gap * 4;
+    border-top: 1px $color-text solid;
+}
+
+
+//专家列表页
+.sc-intor {
+
+    .set-title {
+        text-align: left;
+        font-size: $fontSize + 4;
+        line-height: $gap;
+        margin-bottom: $gap;
+    }
+    
+    .sc-title {
+        margin-bottom: $gap;
+    }
+
+    p {
+        margin-bottom: $gap - 10;
+        line-height: $gap + 8;
+        font-size: $fontSize;
+    }
+
+    .alignleft {
+        height: auto;
+    }
+}
+
+.sc-pdf {
+    
+    margin-top: $gap;
+    
+    li {
+        padding-left: $gap;
+        line-height: $gap + 10;
+    }
+    
+    .fa {
+        margin-right: $gap - 10;
+    }
+}
+
+
+
+@include mq($max-width:768px){
+    
+    .sc-pdf {
+        margin: $gap 0;
+        
+        li {
+            padding-left: 0;
+        }
+    }
+}

@@ -1,0 +1,80 @@
+.sub-banner {
+  line-height: 300px;
+  height: 300px;
+  background-size: cover;
+  text-align: center;
+  color: $color-text;
+  margin-top: $gap * 4.5;
+
+  @include mq($max-width:1600px) {
+    height: 250px;
+    line-height: 250px;
+  }
+
+  @include mq($max-width:1024px) {
+    height: 200px;
+    line-height: 200px;
+  }
+
+  @include mq($max-width:768px){
+    height: 200px;
+    line-height: 200px;
+    margin-top: 55px;
+
+    .txt {
+      line-height: 1;
+      margin-bottom: 10px;
+      font-size: $fontSize + 10;
+    }
+
+    .scroll-btn {
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+    }
+  }
+}
+
+
+.banner-about {
+  position: relative;
+  height: 455px;
+  line-height: 455px;
+  
+  @include mq($max-width:768px){
+    height: 220px;
+    line-height: 220px;
+    margin-top: 0;
+  }
+}
+
+.sub-banner-about {
+  position: fixed;
+  width: 100%;
+  background: url("/images/aqua-seal-duck_1980.png") no-repeat center center;
+  background-size: cover;
+  height: 400px;
+  line-height: 400px;
+  color: $colorBg;
+
+  .banner-view {
+    position: relative;
+    z-index: 3;
+  }
+
+  .txt {
+    margin-bottom: $gap;
+    color: $orange;
+    font-size: $fontSize * 3;
+  }
+
+  .upb_row_bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background: url(/images/09.png);
+  }
+}

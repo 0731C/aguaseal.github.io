@@ -1,0 +1,85 @@
+.sc-seal {
+    padding: ($gap * 4) 0;
+    text-align: center;
+
+    h2 {
+        display: inline-block;
+        position: relative;
+        color: $color-text;
+        line-height: $gap * 3;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: $fontSize;
+    }
+
+    .sc-sub-title {
+        margin-top: $gap;
+        font-size: $fontSize + 6;
+    }
+
+    .sc-sub-btn {
+        margin-top: $gap * 3;
+        display: inline-block;
+        border-radius: 10px;
+        padding: 0 $gap + 20;
+        font-size: $fontSize + 4;
+        border: 2px $color-text solid;
+        line-height: $gap + 20;
+        text-align: center;
+        transition: all .5s;
+        color: $color-text;
+        
+        &:hover {
+            background: $color-text;
+
+            a {
+                color: $colorBg;
+            }
+        }
+        .fa {
+            margin-left: $gap - 10;
+        }
+    }
+}
+
+.sc-seal-item {
+    padding: 40px;
+    
+    ul {
+        @include row;
+    }
+
+    li {
+        @include col(3);
+    }
+}
+
+
+@include mq($max-width:768px){ 
+    
+    .sc-seal {
+        padding-top: 0;
+
+        h2 {
+                font-size: $fontSize + 4;
+        }
+
+        p {
+            font-size: $fontSize;
+        }
+
+        .sc-seal-item {
+
+            li {
+                @include col(1);
+                margin-bottom: $gap;
+
+                img {
+                    width: 150px;
+                }
+            }
+        }
+    }
+}

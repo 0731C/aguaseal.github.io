@@ -1,0 +1,46 @@
+//中间小导航
+.content-nav {
+  border-bottom: #ededed 1px solid;
+
+  @include screen(768px,1024px) {
+    .container {
+      width: 88%;
+    }
+  }
+
+  .item {
+    position: relative;
+    display: inline-block;
+    margin-right: $gap * 4;
+    line-height: $gap * 4;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 3px;
+      left: 0;
+      bottom: 0;
+      background: $orange;
+      transition: all .2s;
+    }
+
+    &:hover {
+      color: $color6;
+      transition: all .2s;
+
+      &::before {
+        background: $orange;
+        transition: all .2s;
+        width: 100%;
+      }
+    }
+
+    &.on {
+      color: $orange;
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+}

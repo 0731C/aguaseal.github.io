@@ -1,0 +1,45 @@
+//关于我们
+@include mq($max-width:768px){
+  .sec-about-desc {
+
+    p {
+      font-size: $fontSize - 2px;
+      line-height: $gap + 4;
+      color: $color6;
+    }
+
+    .sec-detailed {
+      width: auto;
+      text-align: left;
+    }
+  }
+
+  .sec-about-item {
+    margin-top: 0;
+
+    .item {
+      @include col(2);
+      margin-bottom: $gap;
+
+      &:nth-child(1n),&:nth-child(2n) {
+        width: 50%;
+        text-align: center;
+      }
+
+      &:nth-child(2n) {
+        padding-left: $gap * 2;
+        border-right: none;
+      }
+    }
+
+    .tit {
+      text-align: left;
+      font-size: $fontSize + 16;
+    }
+
+    .txt {
+      text-align: left;
+      font-size: $fontSize;
+    }
+  }
+}

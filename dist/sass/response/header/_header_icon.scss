@@ -1,0 +1,32 @@
+//头部菜单的按扭
+@include mq($max-width:768px){
+  .index-page {
+
+  }
+  .header-user {
+    width: auto;
+    margin-right: 10px;
+    line-height: 56px;
+
+    .icon-list {
+      display: inline-block;
+    }
+    .icon-svg {
+      margin: 0 15px;
+      color:$color3;
+    }
+    .icon-home {
+      display:none;
+    }
+
+    .icon-close {
+      display: none;
+    }
+
+    .cur {
+      .icon-list {
+        color: $orange;
+      }
+    }
+  }
+}

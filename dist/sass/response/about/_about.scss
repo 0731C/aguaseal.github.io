@@ -1,0 +1,44 @@
+@include mq($max-width:768px){ 
+
+  .app-row {
+
+    .app-col-6 {
+      @include col(1);
+      margin-bottom: $gap;
+
+      p {
+        line-height: $gap + 2;
+        word-wrap: break-word;
+        word-break: break-all;
+        text-align: justify;
+      }
+    }
+
+    .app-col-8 {
+      @include col(1);
+    }
+  }
+
+  .sc-line {
+    padding-top: $gap;
+    padding-bottom: $gap;
+    margin-top: $gap;
+  }
+
+  .sc-row {
+
+    .alignleft {
+      width: 120px;
+      margin-right: 10px;
+    }
+  }
+
+  .sc-intor {
+
+    .sc-title {
+      margin-bottom: $gap - 10;
+    }
+  }
+
+
+}

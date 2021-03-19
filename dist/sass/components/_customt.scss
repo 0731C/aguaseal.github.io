@@ -1,0 +1,308 @@
+//about
+.sec-title {
+	position: relative;
+	font-size: 60px;
+	line-height:1;
+	margin-bottom:60px;
+	font-weight: bold;
+	color: #f5f5f5;
+	text-align: center;
+
+	span {
+		display: block;
+		margin-top: -$gap;
+		font-size: $fontSize + 4;
+		color: $color3;
+	}
+}
+
+.sec-about-desc {
+
+	.sec-detailed {
+		width: 85%;
+		margin: auto;
+		line-height: $gap + 6;
+		text-align: center;
+		color: $color6;
+
+		p {
+			margin-bottom: $gap;
+		}
+	}
+
+	.sec-about-img {
+		padding: $gap 0;
+	}
+}
+
+
+//关于我们
+.sec-about-info {
+
+	.item-list {
+		margin-bottom: $gap * 4;
+
+		p {
+			color: $color9;
+			line-height: $gap + 10;
+		}
+
+		> div {
+			@include col(2);
+
+			&:nth-child(2n) {
+				width: 45%;
+				float: right;
+			}
+		}
+
+		&:nth-child(2n) {
+
+			.img {
+				float: right;
+			}
+		}
+		&:nth-child(2n) {
+
+			.title {
+				float: left;
+			}
+		}
+
+		.sec-title {
+			text-align: left;
+		}
+	}
+
+}
+
+.sec-about-item {
+	margin-top: $gap * 2;
+
+	.item {
+		@include col(4);
+		border-right: 1px $colorC solid;
+		position: relative;
+
+		&:nth-of-type(1) {
+			width: 17%;
+			text-align: left;
+		}
+		&:nth-of-type(3) {
+			width: 33%;
+		}
+
+		&:last-child {
+			border-right: none;
+		}
+	}
+
+	.tit {
+		font-size: $fontSize * 3;
+		color: $orange;
+	}
+}
+
+
+.about-tab-btn {
+	margin: $gap auto;
+	width: 800px;
+	height: $gap + 30;
+	line-height: $gap + 30;
+	border: 1px $orange solid;
+	border-radius: 30px;
+	font-size: 0;
+	overflow: hidden;
+
+	a {
+		width: 20%;
+		display: inline-block;
+		text-align: center;
+		border-right: 1px $orange solid;
+		font-size: $fontSize;
+		color: $color3;
+		transition: all .2s;
+
+		&:hover {
+			background: $orange;
+			color: $colorBg;
+		}
+
+		&.cur {
+			background: $orange;
+			color: $colorBg;
+		}
+	}
+}
+
+.about-tab-con {
+	margin-top: $gap * 5;
+
+	.honor {
+		border: 1px #ddd solid;
+
+		.swiper-slide {
+			padding: $gap + 40;
+			border-left: 1px $colorC solid;
+
+			&:first-child {
+				border-left: none;
+			}
+		}
+
+
+	}
+
+	.item-txt {
+		margin-top: $gap;
+	}
+
+	.honor{
+		overflow: hidden;
+	}
+
+	.case-tab{
+		overflow: hidden;
+	}
+
+	.pro {
+		position: relative;
+	}
+
+	.item {
+		display: none;
+	}
+
+	.item-con {
+		display: block;
+
+		.item-txt {
+			text-align: center;
+		}
+	}
+
+	.prev,.next {
+		position: absolute;
+		top: 50%;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		border: 1px $orange solid;
+		background: url("/images/page-prev.png") no-repeat center center;
+
+	}
+
+	.next {
+		left: -70px;
+
+		&:hover {
+			background:$orange url("/images/page-next2.png") no-repeat center center;
+		}
+	}
+
+	.prev {
+		right: -70px;
+		background: url("/images/page-prev.png") no-repeat center center;
+
+		&:hover{
+			right: -70px;
+			background:$orange url("/images/page-prev2.png") no-repeat center center;
+		}
+	}
+}
+
+
+//品牌历程
+.sec-about-course {
+
+	.sec-title {
+		margin-bottom: 0;
+		padding-bottom: $gap;
+		border-bottom: 1px $colorC solid;
+	}
+
+	li {
+		position: relative;
+		padding-top: $gap * 2;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 10%;
+			top: 0;
+			height: 100%;
+			width: 1px;
+			background: $colorC;
+		}
+
+		.item-line {
+			position: absolute;
+			left: 10%;
+			top: 70%;
+			margin-left: -25px;
+			height: 2px;
+			width: 50px;
+			background: $colorC;
+			transition: all .2s;
+		}
+
+		.item-year {
+			float: left;
+			width: 100px;
+			font-size: $fontSize * 2;
+		}
+
+		.item-desc {
+			width: 85%;
+			float: right;
+
+			img {
+				margin-top: $gap;
+			}
+		}
+
+		.item-title {
+			position: relative;
+			cursor:pointer;
+			line-height: $gap * 2;
+			font-size: $fontSize + 2px;
+		}
+
+		.item-info {
+			display: none;
+		}
+
+		.item-btn {
+			position: absolute;
+			right: 0;
+			top: 25%;
+			width: 20px;
+			height: 20px;
+			border-radius: 10px;
+			background: $color9 url("/images/course-jia.png") no-repeat center center;
+		}
+
+		&.cur {
+
+			.item-btn {
+				top: 0;
+			}
+
+			.item-line {
+				top: 25%;
+			}
+
+			.item-year,.item-title {
+				color: $orange;
+			}
+
+			.item-title {
+				font-size: $fontSize + 2px;
+			}
+
+			.item-btn {
+				background: $orange url("/images/course-jian.png") no-repeat center center;
+			}
+		}
+	}
+}

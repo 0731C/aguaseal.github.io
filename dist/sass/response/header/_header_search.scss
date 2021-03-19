@@ -1,0 +1,66 @@
+//头部菜单的按扭
+@include mq($max-width:768px){
+
+  .header-search-box {
+    top: 0;
+    padding: 0;
+    height: 100%;
+    position: fixed;
+
+    .search-top {
+      padding: $gap;
+    }
+
+    .search {
+      padding: $gap 0 0;
+      width: 100%;
+      input[type=text] {
+        width:70%;
+        height: 30px;
+        line-height: 30px;
+
+      }
+      input[type=submit] {
+        width: 60px;
+        height: 30px;
+        line-height: $gap;
+        color: $colorBg;
+        font-size: $fontSize - 2;
+      }
+    }
+
+    .search-txt {
+      padding: 0;
+
+      h3 {
+        margin: 0;
+        padding-left: $gap;
+        line-height: $gap * 2;
+        font-size: $fontSize + 4;
+      }
+
+      li:nth-child(2n+1) {
+        background: #f1f1f1;
+        color: $colorBg;
+      }
+
+      a {
+        padding-left: $gap;
+        height: $gap + 10px;
+        line-height: $gap + 10px;
+        font-size: $fontSize;
+        color: $color9;
+      }
+    }
+
+    .search-close {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      left: 50%;
+      top: 50%;
+      margin-left: -15px;
+      background-size: cover;
+    }
+  }
+}

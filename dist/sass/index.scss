@@ -1,0 +1,89 @@
+//核心文件调用，如需要reset样式则为core
+@import '../../node_modules/sass-sandal/core';
+//or
+@import '../../node_modules/sass-sandal/function';
+
+//扩展调用对应模块
+@import '../../node_modules/sass-sandal/ext/icons';
+@import '../../node_modules/sass-sandal/ext/helper';
+@import '../../node_modules/sass-sandal/ext/grid';
+@import '../../node_modules/sass-sandal/ext/page-slide';
+
+//扩展调用对应组件
+
+@import 'components/layout';
+@import 'components/header';
+@import 'components/banner';
+@import 'components/banner/banner';
+
+//栏目导航
+@import 'components/category/category_nav';
+
+//关于我们
+@import 'components/about/about';
+
+//关于我们
+@import 'components/customt';
+
+//联系我们
+@import 'components/contact';
+
+//首页
+@import 'components/index';
+
+//产品页面
+@import 'components/news';
+
+//产品销售
+@import 'components/sc-seal/sc_seal';
+
+//底部
+@import 'components/footer';
+
+
+
+
+/////////////////////////////////////////////以下为手机站响应式代码
+//header
+@import 'response/header/header';
+@import 'response/header/header_icon';
+@import 'response/header/header_search';
+
+//首页新闻
+@import 'response/indexnews/inews';
+
+//首页服务
+@import 'response/indexnews/iserver';
+
+//首页服务
+@import 'response/index/sc-index';
+
+//首页产品
+//@import 'response/indexnews/iproduct';
+
+//面包导航
+//@import 'response/news/news_bread';
+
+//关于我们
+@import 'response/about/about';
+
+
+//新闻列表页
+@import 'response/news/news_list';
+
+//新闻内容页
+@import 'response/news/news_info';
+@import 'response/news/news_info_sidebar';
+
+//产品列表页
+@import 'response/prolist/proindex'; //默认产品列表页一行一个手机站
+@import 'response/prolist/prolist';  //产品列表页一行二个手机站
+
+//联系我们
+@import 'response/contact/contact';   //公司介绍
+@import 'response/contact/contact2';  //企业荣浴
+
+//footer
+@import 'response/footer/footer-nav';
+@import 'response/footer/footer-header';
+@import 'response/footer/footer-copy';
