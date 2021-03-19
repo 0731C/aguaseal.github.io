@@ -1,2 +1,2 @@
-# aguaseal.giyhub.io
+# aguaseal.github.io
 aguaseal
